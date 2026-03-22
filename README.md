@@ -2,6 +2,8 @@
 
 Deploy Home Assistant on Railway using the official container image.
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/new)
+
 ## Environment variables
 
 ```bash
@@ -18,3 +20,4 @@ Attach a Railway volume and mount to:
 
 - Home Assistant is usually run in a home network environment with local discovery.
 - On Railway, cloud-only integrations work best.
+- Keep `/config` on a persistent volume before adding integrations.
