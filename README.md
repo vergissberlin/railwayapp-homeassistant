@@ -4,7 +4,7 @@
 
 Deploy Home Assistant on Railway using the official container image with Railway-ready proxy handling.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/new?referralCode=2_sIT9)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/Ovsuk-?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## Files in this template
 
