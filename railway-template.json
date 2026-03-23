@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/vergissberlin/railway/main/docs/railway-template.schema.json",
+  "schemaVersion": 1,
+  "project": "railwayapp-homeassistant",
+  "repo": "vergissberlin/railwayapp-homeassistant",
+  "displayName": "Home Assistant",
+  "publishedCode": "home-assistant",
+  "image": "https://raw.githubusercontent.com/vergissberlin/railwayapp-homeassistant/main/railwayapp-homeassistant.svg",
+  "description": "Deploy Home Assistant on Railway with the official container image.",
+  "workspaceAutomation": true
+}
