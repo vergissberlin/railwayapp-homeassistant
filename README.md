@@ -37,3 +37,6 @@ Attach a Railway volume and mount to:
 - Home Assistant expects reverse-proxy headers when deployed behind Railway edge.
 - Local network auto-discovery integrations are limited in cloud environments.
 - Keep `/config` on a persistent volume before adding integrations.
+
+<!-- footer -->
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-18BCF2?style=for-the-badge&logo=homeassistant&logoColor=white)](https://github.com/vergissberlin/railwayapp-homeassistant)
