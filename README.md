@@ -1,6 +1,6 @@
 # Home Assistant
 
-![Home Assistant Icon](./railwayapp-homeassistant.svg)
+<img src="./railwayapp-homeassistant.svg" alt="Home Assistant Icon" width="144" />
 
 Deploy Home Assistant on Railway using the official container image with Railway-ready proxy handling.
 
