@@ -1,0 +1,22 @@
+<svg width="1280" height="270" viewBox="0 0 1280 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Home Assistant header banner</title>
+  <desc id="desc">Flat gradient banner for Home Assistant template with software logo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1021"/>
+      <stop offset="0.55" stop-color="#131B3F"/>
+      <stop offset="1" stop-color="#1F174A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="270" rx="26" fill="url(#bg)"/>
+  <circle cx="1120" cy="68" r="34" fill="#4F46E5" opacity="0.33"/>
+  <circle cx="1185" cy="205" r="56" fill="#06B6D4" opacity="0.15"/>
+  
+      <rect x="64" y="60" width="152" height="152" rx="24" fill="#0B1228" opacity="0.92"/>
+      <image href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMThCQ0YyIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8dGl0bGU+SG9tZSBBc3Npc3RhbnQ8L3RpdGxlPgogIDxwYXRoIGQ9Ik0yMi45MzkgMTAuNjI3IDEzLjA2MS43NDlhMS41MDUgMS41MDUgMCAwIDAtMi4xMjEgMGwtOS44NzkgOS44NzhDLjQ3OCAxMS4yMSAwIDEyLjM2MyAwIDEzLjE4N3Y5YzAgLjgyNi42NzUgMS41IDEuNSAxLjVoOS4yMjdsLTQuMDYzLTQuMDYyYTIuMDM0IDIuMDM0IDAgMCAxLS42NjQuMTEzYy0xLjEzIDAtMi4wNS0uOTItMi4wNS0yLjA1cy45Mi0yLjA1IDIuMDUtMi4wNSAyLjA1LjkyIDIuMDUgMi4wNWMwIC4yMzMtLjA0MS40NTYtLjExMy42NjVsMy4xNjMgMy4xNjNWOS45MjhhMi4wNSAyLjA1IDAgMCAxLTEuMTUtMS44NGMwLTEuMTMuOTItMi4wNSAyLjA1LTIuMDVzMi4wNS45MiAyLjA1IDIuMDVhMi4wNSAyLjA1IDAgMCAxLTEuMTUgMS44NHY4LjEyN2wzLjE0Ni0zLjE0NkEyLjA1MSAyLjA1MSAwIDAgMSAxOCAxMi4yMzljMS4xMyAwIDIuMDUuOTIgMi4wNSAyLjA1cy0uOTIgMi4wNS0yLjA1IDIuMDVjLS4yNSAwLS40ODgtLjA0Ny0uNzA5LS4xM0wxMi45IDIwLjYwMnYzLjA4OGg5LjZjLjgyNSAwIDEuNS0uNjc1IDEuNS0xLjV2LTljMC0uODI1LS40NzctMS45NzctMS4wNjEtMi41NjF6Ii8+Cjwvc3ZnPgo=" x="84" y="80" width="112" height="112" preserveAspectRatio="xMidYMid meet"/>
+    
+  <text x="258" y="122" fill="#FFFFFF" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="52" font-weight="800">Home Assistant</text>
+  <text x="258" y="168" fill="#B6C2FF" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="28" font-weight="500">Railway Template</text>
+  <rect x="258" y="188" width="286" height="44" rx="22" fill="#1C285D" stroke="#67E8F9" stroke-opacity="0.6"/>
+  <text x="284" y="216" fill="#CFFAFE" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="19" font-weight="700">Deploy on Railway</text>
+</svg>
