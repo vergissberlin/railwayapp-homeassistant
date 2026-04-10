@@ -11,7 +11,7 @@ Deploy Home Assistant on Railway using the official container image with Railway
 
 - `Dockerfile` uses `ghcr.io/home-assistant/home-assistant:stable`.
 - `docker-entrypoint.sh` configures trusted reverse proxies and forwards Railway's dynamic `$PORT` to Home Assistant's internal `8123`.
-- `railway.toml` defines start command, health check path, and restart policy.
+- `railway.toml` defines start command, health check path, restart policy, and required volume mount.
 
 ## Environment variables
 
@@ -32,6 +32,8 @@ Railway provides `PORT` automatically at runtime.
 Attach a Railway volume and mount to:
 
 - `/config`
+
+The template enforces this with `requiredMountPath` in `railway.toml`.
 
 ## Notes
 
