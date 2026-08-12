@@ -7,6 +7,16 @@ Deploy Home Assistant on Railway using the official container image with Railway
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/Ovsuk-?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
+## 🏗️ Architecture
+
+```mermaid
+flowchart LR
+    Client(["🌐 Client"]) -->|HTTPS| Domain["Railway Public Domain"]
+    Domain -->|"$PORT"| Entry["railway-homeassistant-entrypoint"]
+    Entry --> App["Container\nhome-assistant:stable"]
+    App --> Volume[("Volume\n/config")]
+```
+
 ## Files in this template
 
 - `Dockerfile` uses `ghcr.io/home-assistant/home-assistant:stable`.
