@@ -4,15 +4,7 @@ set -eu
 CONFIG_DIR="${CONFIG_DIR:-/config}"
 CONFIG_FILE="${CONFIG_DIR}/configuration.yaml"
 
-# TEMPORARY one-time reset: this volume already booted several times on Home Assistant 2026.8.x,
-# which can write .storage in a format the 2026.7.4 downgrade below doesn't understand. No real
-# configuration exists yet (onboarding was never completed), so wipe it once for a clean first
-# boot on the pinned version. Remove this block after the next successful deploy.
-# NOTE: "${CONFIG_DIR}" is itself the volume mount point, so it can't be removed and recreated
-# (device busy) - and "rm -rf dir/*" skips dotfiles like .storage, letting them survive. Delete
-# everything below the mount point instead, dotfiles included.
 mkdir -p "${CONFIG_DIR}"
-find "${CONFIG_DIR}" -mindepth 1 -exec rm -rf {} +
 touch "${CONFIG_FILE}"
 
 # Railway traffic is forwarded through an internal reverse proxy, then relayed to Home
