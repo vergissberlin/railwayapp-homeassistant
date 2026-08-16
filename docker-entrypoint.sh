@@ -8,7 +8,9 @@ CONFIG_FILE="${CONFIG_DIR}/configuration.yaml"
 # which can write .storage in a format the 2026.7.4 downgrade below doesn't understand. No real
 # configuration exists yet (onboarding was never completed), so wipe it once for a clean first
 # boot on the pinned version. Remove this block after the next successful deploy.
-rm -rf "${CONFIG_DIR:?}"/*
+# NOTE: "rm -rf dir/*" does not match dotfiles - .storage survives and crashes the older core
+# with UnsupportedStorageVersionError, so the directory itself must be removed and recreated.
+rm -rf "${CONFIG_DIR:?}"
 
 mkdir -p "${CONFIG_DIR}"
 touch "${CONFIG_FILE}"
