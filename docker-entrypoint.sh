@@ -34,4 +34,8 @@ EOF
 # Home Assistant binds to 8123 internally; expose Railway's dynamic PORT.
 socat TCP-LISTEN:"${PORT}",fork,reuseaddr TCP:127.0.0.1:8123 &
 
+echo "railway-entrypoint: DEBUG configuration.yaml content:" >&2
+cat "${CONFIG_FILE}" >&2
+echo "railway-entrypoint: DEBUG end" >&2
+
 exec /init
