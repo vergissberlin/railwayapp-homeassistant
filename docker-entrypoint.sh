@@ -4,6 +4,12 @@ set -eu
 CONFIG_DIR="${CONFIG_DIR:-/config}"
 CONFIG_FILE="${CONFIG_DIR}/configuration.yaml"
 
+# TEMPORARY one-time reset: this volume already booted several times on Home Assistant 2026.8.x,
+# which can write .storage in a format the 2026.7.4 downgrade below doesn't understand. No real
+# configuration exists yet (onboarding was never completed), so wipe it once for a clean first
+# boot on the pinned version. Remove this block after the next successful deploy.
+rm -rf "${CONFIG_DIR:?}"/*
+
 mkdir -p "${CONFIG_DIR}"
 touch "${CONFIG_FILE}"
 
