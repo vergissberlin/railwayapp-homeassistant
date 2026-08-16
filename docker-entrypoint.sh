@@ -12,8 +12,14 @@ touch "${CONFIG_FILE}"
 # Home Assistant actually sees, so it must be trusted alongside Railway's edge range - otherwise
 # the still-genuine X-Forwarded-For header from Railway's edge is rejected as coming from an
 # untrusted proxy and every request gets a 400 Bad Request.
-if ! grep -q "RAILWAY_PROXY_CONFIG_START" "${CONFIG_FILE}"; then
-  cat >> "${CONFIG_FILE}" <<'EOF'
+# configuration.yaml lives on the persistent volume, so a stale block from an older image
+# would survive untouched forever if we only appended-when-missing. Strip any previous
+# RAILWAY_PROXY_CONFIG block first so redeploys always pick up the current trusted-proxies list.
+if grep -q "RAILWAY_PROXY_CONFIG_START" "${CONFIG_FILE}"; then
+  sed -i '/# RAILWAY_PROXY_CONFIG_START/,/# RAILWAY_PROXY_CONFIG_END/d' "${CONFIG_FILE}"
+fi
+
+cat >> "${CONFIG_FILE}" <<'EOF'
 
 # RAILWAY_PROXY_CONFIG_START
 http:
@@ -24,7 +30,6 @@ http:
     - ::1
 # RAILWAY_PROXY_CONFIG_END
 EOF
-fi
 
 # Home Assistant binds to 8123 internally; expose Railway's dynamic PORT.
 socat TCP-LISTEN:"${PORT}",fork,reuseaddr TCP:127.0.0.1:8123 &
