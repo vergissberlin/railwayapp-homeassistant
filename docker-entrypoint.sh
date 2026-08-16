@@ -32,10 +32,10 @@ http:
 EOF
 
 # Home Assistant binds to 8123 internally; expose Railway's dynamic PORT.
-socat TCP-LISTEN:"${PORT}",fork,reuseaddr TCP:127.0.0.1:8123 &
-
-echo "railway-entrypoint: DEBUG configuration.yaml content:" >&2
-cat "${CONFIG_FILE}" >&2
-echo "railway-entrypoint: DEBUG end" >&2
+# Forced to IPv4 (-4): on a dual-stack socket, an IPv4 connection to 127.0.0.1 is otherwise seen
+# by Home Assistant as the IPv4-mapped IPv6 peer "::ffff:127.0.0.1", which doesn't match a plain
+# "127.0.0.1" trusted_proxies entry - Home Assistant then still logs the forwarded header as
+# coming from an untrusted proxy even though 127.0.0.1 is listed above.
+socat -4 TCP-LISTEN:"${PORT}",fork,reuseaddr TCP:127.0.0.1:8123 &
 
 exec /init
