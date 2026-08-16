@@ -8,11 +8,11 @@ CONFIG_FILE="${CONFIG_DIR}/configuration.yaml"
 # which can write .storage in a format the 2026.7.4 downgrade below doesn't understand. No real
 # configuration exists yet (onboarding was never completed), so wipe it once for a clean first
 # boot on the pinned version. Remove this block after the next successful deploy.
-# NOTE: "rm -rf dir/*" does not match dotfiles - .storage survives and crashes the older core
-# with UnsupportedStorageVersionError, so the directory itself must be removed and recreated.
-rm -rf "${CONFIG_DIR:?}"
-
+# NOTE: "${CONFIG_DIR}" is itself the volume mount point, so it can't be removed and recreated
+# (device busy) - and "rm -rf dir/*" skips dotfiles like .storage, letting them survive. Delete
+# everything below the mount point instead, dotfiles included.
 mkdir -p "${CONFIG_DIR}"
+find "${CONFIG_DIR}" -mindepth 1 -exec rm -rf {} +
 touch "${CONFIG_FILE}"
 
 # Railway traffic is forwarded through an internal reverse proxy, then relayed to Home
