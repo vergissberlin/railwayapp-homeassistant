@@ -3,6 +3,6 @@
 # confirms the imported settings within 5 minutes of the first restart - impossible on a headless
 # first deploy where no admin account exists yet, so YAML-configured proxies were silently
 # reverted and every request behind Railway's proxy got a 400 "untrusted proxy" rejection.
-FROM ghcr.io/home-assistant/home-assistant:2026.7.4
+FROM ghcr.io/home-assistant/home-assistant:2026.9.1
 
 COPY --chmod=0755 docker-entrypoint.sh /usr/local/bin/railway-homeassistant-entrypoint
