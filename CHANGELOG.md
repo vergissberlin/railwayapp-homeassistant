@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/vergissberlin/railwayapp-homeassistant/compare/railwayapp-homeassistant-v0.2.0...railwayapp-homeassistant-v0.2.1) (2026-10-21)
+
+
+### Chores
+
+* hold Home Assistant minor/major upgrades for manual approval ([#10](https://github.com/vergissberlin/railwayapp-homeassistant/issues/10)) ([b6cd79b](https://github.com/vergissberlin/railwayapp-homeassistant/commit/b6cd79bda1adb3e7e76cf81a0647493324ebd26d))
+
 ## [0.2.0](https://github.com/vergissberlin/railwayapp-homeassistant/compare/railwayapp-homeassistant-v0.1.0...railwayapp-homeassistant-v0.2.0) (2026-08-20)
 
 
