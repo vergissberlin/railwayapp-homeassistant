@@ -2,5 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Home Assistant 2026.8+ migrates the YAML http: integration to the UI, which breaks the proxy block written by docker-entrypoint.sh. Hold minor/major bumps until that block is migrated; patch releases stay automatic.",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ghcr.io/home-assistant/home-assistant"],
+      "matchUpdateTypes": ["major", "minor"],
+      "dependencyDashboardApproval": true
+    }
   ]
 }
