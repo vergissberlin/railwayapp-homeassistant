@@ -51,6 +51,10 @@ The template enforces this with `requiredMountPath` in `railway.toml`.
 - Local network auto-discovery integrations are limited in cloud environments.
 - Keep `/config` on a persistent volume before adding integrations.
 
+## 💬 Support
+
+Questions or feedback? Visit the [template forum on Railway Central Station](https://station.railway.com/templates/home-assistant-398b661c).
+
 <!-- footer -->
 ---
 
