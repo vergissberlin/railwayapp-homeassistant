@@ -5,7 +5,7 @@
 
 Deploy Home Assistant on Railway using the official container image with Railway-ready proxy handling.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/Ovsuk-?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/home-assistant?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## 🏗️ Architecture
 
@@ -50,6 +50,10 @@ The template enforces this with `requiredMountPath` in `railway.toml`.
 - Home Assistant expects reverse-proxy headers when deployed behind Railway edge.
 - Local network auto-discovery integrations are limited in cloud environments.
 - Keep `/config` on a persistent volume before adding integrations.
+
+## 💬 Support
+
+Questions or feedback? Visit the [template forum on Railway Central Station](https://station.railway.com/templates/home-assistant-398b661c).
 
 <!-- footer -->
 ---
