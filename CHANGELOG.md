@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.2](https://github.com/vergissberlin/railwayapp-homeassistant/compare/railwayapp-homeassistant-v0.2.1...railwayapp-homeassistant-v0.2.2) (2026-10-28)
+
+
+### Documentation
+
+* fix Railway deploy button link and add template forum link ([#12](https://github.com/vergissberlin/railwayapp-homeassistant/issues/12)) ([f86b355](https://github.com/vergissberlin/railwayapp-homeassistant/commit/f86b355cf818ac152803e5e49435399d22d864da))
+
+
+### Chores
+
+* **deps:** update ghcr.io/home-assistant/home-assistant docker tag to v2026.10.4 ([#9](https://github.com/vergissberlin/railwayapp-homeassistant/issues/9)) ([fc6bd1f](https://github.com/vergissberlin/railwayapp-homeassistant/commit/fc6bd1f6b3fa3612a1d2fde58ed0d42ac7f23c58))
+
 ## [0.2.1](https://github.com/vergissberlin/railwayapp-homeassistant/compare/railwayapp-homeassistant-v0.2.0...railwayapp-homeassistant-v0.2.1) (2026-10-21)
 
 
